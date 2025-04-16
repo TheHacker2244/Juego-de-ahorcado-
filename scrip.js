@@ -1,5 +1,5 @@
 const wordContainer = document.getElementById('wordContainer');
-const startButton = document.getElementById('startButton'); 
+const startButton = document.getElementById('startButton');  
 const usedLettersElement = document.getElementById('usedLetters');
 
 let canvas = document.getElementById('canvas');
@@ -34,12 +34,13 @@ const addBodyParts = (bodyPart) => {
 
 const wrongLetters = () => {
     addBodyParts(bodyParts[mistakes]);  
+    mistakes++;
     if(mistakes === bodyParts.length) endGame();  
 }
 
 const endGame = () => {
     document.removeEventListener('keydown', letterElement);
-    startButton.style.display = 'block'; 
+    startButton.style.display = 'block';  
 }
 
 const correctLetter = letter => {  
