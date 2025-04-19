@@ -92,11 +92,14 @@ const drawHangMan = () => {
     ctx.scale(20, 20);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = '#d95d59';
-    ctx.fillRect(0, 7, 4, 1);
-    ctx.fillRect(1, 0, 1, 8);
-    ctx.fillRect(2, 0, 3, 1);
-    ctx.fillRect(4, 1, 1, 1);
-}
+    
+    // Ajustes de coordenadas para centrar el dibujo
+    ctx.fillRect(8, 7, 4, 1);   // Base horizontal centrada
+    ctx.fillRect(10, 0, 1, 8);  // Palo vertical (centrado)
+    ctx.fillRect(6, 0, 7, 1);   // Travesaño superior
+    ctx.fillRect(5, 1, 1, 1);   // Soporte de la soga
+};
+
 
 const startGame = () => {
     usedLetters = [];
